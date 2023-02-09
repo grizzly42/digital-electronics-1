@@ -10,7 +10,9 @@
 
 :+1:
 
-| First Header  | Second Header |
+|nand |
 | ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+|0 |0  |
+| 0  | 1  |
+|1  | 0  |
+| 1  | 1  |
