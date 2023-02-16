@@ -11,7 +11,8 @@
 
    Less than:
 
-   ![K-maps](images/kmap_empty.png)
+   <img width="155" alt="second_kmap" src="https://user-images.githubusercontent.com/61315339/219481858-22e0511d-0cad-4dc3-bedb-471c0ddc1d97.png">
+
 
 2. Mark the largest possible implicants in the K-map and according to them, write the equations of simplified SoP (Sum of the Products) form of the "greater than" function and simplified PoS (Product of the Sums) form of the "less than" function.
 
