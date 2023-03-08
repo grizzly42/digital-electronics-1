@@ -3,10 +3,10 @@
 <!--                                                         -->
 <!-- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="54" Path="C:/Users/240671/Documents/digital-electronics-1/05-ffs/flip_flops/flip_flops.xpr">
+<Project Version="7" Minor="54" Path="C:/Users/240644/Documents/digital-electronics-1/05-ffs/flip_flops/flip_flops.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="c0976734ebe247bfb2200e07d2fe6ed4"/>
+    <Option Name="Id" Val="f690691721c0426d9a8fb111ec0758b0"/>
     <Option Name="Part" Val="xc7a50ticsg324-1L"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -32,7 +32,7 @@
     <Option Name="SimulatorGccInstallDirRiviera" Val=""/>
     <Option Name="SimulatorGccInstallDirActiveHdl" Val=""/>
     <Option Name="TargetLanguage" Val="VHDL"/>
-    <Option Name="BoardPart" Val=""/>
+    <Option Name="BoardPart" Val="digilentinc.com:nexys-a7-50t:part0:1.2"/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
@@ -45,7 +45,8 @@
     <Option Name="IPUserFilesDir" Val="$PIPUSERFILESDIR"/>
     <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
-    <Option Name="WTXSimLaunchSim" Val="0"/>
+    <Option Name="DSABoardId" Val="nexys-a7-50t"/>
+    <Option Name="WTXSimLaunchSim" Val="9"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -80,12 +81,6 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/tb_ff_rst.vhd">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sources_1/new/t_ff_rst.vhd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
@@ -95,7 +90,7 @@
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="tb_ff_rst"/>
+        <Option Name="TopModule" Val="d_ff_rst"/>
         <Option Name="TopAutoSet" Val="TRUE"/>
       </Config>
     </FileSet>
@@ -106,7 +101,12 @@
       </Config>
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1" RelGenDir="$PGENDIR/sim_1">
-      <Filter Type="Srcs"/>
+      <File Path="$PSRCDIR/sim_1/new/tb_ff_rst.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="tb_ff_rst"/>
@@ -120,6 +120,7 @@
         <Option Name="PamSignalDriverFile" Val="xil_bypass_driver"/>
         <Option Name="PamPseudoTop" Val="pseudo_tb"/>
         <Option Name="SrcSet" Val="sources_1"/>
+        <Option Name="xsim.simulate.runtime" Val="200ns"/>
       </Config>
     </FileSet>
     <FileSet Name="utils_1" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
@@ -179,7 +180,9 @@
       <RQSFiles/>
     </Run>
   </Runs>
-  <Board/>
+  <Board>
+    <Jumpers/>
+  </Board>
   <DashboardSummary Version="1" Minor="0">
     <Dashboards>
       <Dashboard Name="default_dashboard">

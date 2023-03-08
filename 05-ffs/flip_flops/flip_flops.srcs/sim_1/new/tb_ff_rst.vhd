@@ -18,9 +18,13 @@ architecture testbench of tb_ff_rst is
     --Local signals
     signal sig_clk_100MHz : std_logic;
     signal sig_rst        : std_logic;
+    
     signal sig_data       : std_logic;
-    signal sig_dq         : std_logic;
-    signal sig_dq_bar     : std_logic;
+    signal sig_d_q        : std_logic;
+    signal sig_d_q_bar    : std_logic;
+    
+    signal sig_t_q        : std_logic;
+    signal sig_t_q_bar    : std_logic;
 
 begin
     -- Connecting testbench signals with d_ff_rst entity
@@ -30,14 +34,23 @@ begin
             clk   => sig_clk_100MHz,
             rst   => sig_rst,
             d     => sig_data,
-            q     => sig_dq,
-            q_bar => sig_dq_bar
+            q     => sig_d_q,
+            q_bar => sig_d_q_bar
+        );
+        
+     uut_t_ff_rst : entity work.t_ff_rst
+        port map (
+            clk   => sig_clk_100MHz,
+            rst   => sig_rst,
+            t     => sig_data,
+            q     => sig_t_q,
+            q_bar => sig_t_q_bar        
         );
 
     --------------------------------------------------------
     -- Clock generation process
     --------------------------------------------------------
-    p_clk_gen : process is
+    p_clk_gen : process
     begin
         while now < 300 ns loop -- 30 periods of 100MHz clock
             sig_clk_100MHz <= '0';
@@ -51,15 +64,17 @@ begin
     --------------------------------------------------------
     -- Reset generation process
     --------------------------------------------------------
-    p_reset_gen : process is
+    p_reset_gen : process
     begin
         sig_rst <= '0';
-
-        -- ACTIVATE AND DEACTIVATE RESET HERE
-        -- wait for XXX ns;
-        -- sig_rst <= XXX;
-        -- wait for XXX ns;
-        -- sig_rst <= XXX;
+        wait for 17 ns;
+        sig_rst <= '1';
+        wait for 13 ns;
+        sig_rst <='0';
+        wait for 70 ns;
+        sig_rst <= '1';
+        wait for 25 ns;
+        sig_rst <='0';
 
         wait;
     end process p_reset_gen;
@@ -67,15 +82,22 @@ begin
     --------------------------------------------------------
     -- Data generation process
     --------------------------------------------------------
-    p_stimulus : process is
+    p_stimulus : process
     begin
         report "Stimulus process started";
-        sig_data <='0'; wait for 13 ns;
-
-        -- DEFINE YOUR INPUT DATA HERE
+        sig_data <='0';  wait for 13 ns;
+        sig_data <='1';  wait for 13 ns;
+        sig_data <='0';  wait for 13 ns;
+        sig_data <='1';  wait for 13 ns;
+        sig_data <='0';  wait for 17 ns;
+        sig_data <='1';  wait for 20 ns;
+        sig_data <='0';  wait for 10 ns;
+        sig_data <='1';  wait for 15 ns;
 
         report "Stimulus process finished";
         wait;
     end process p_stimulus;
+    
+
 
 end architecture testbench;

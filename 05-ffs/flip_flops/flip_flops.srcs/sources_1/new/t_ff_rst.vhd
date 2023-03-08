@@ -2,7 +2,7 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 03/08/2023 02:12:24 PM
+-- Create Date: 07.03.2023 11:48:45
 -- Design Name: 
 -- Module Name: t_ff_rst - Behavioral
 -- Project Name: 
@@ -32,9 +32,9 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity t_ff_rst is
-    Port ( d : in STD_LOGIC;
+    Port ( rst : in STD_LOGIC;
            clk : in STD_LOGIC;
-           rst : in STD_LOGIC;
+           t : in STD_LOGIC;
            q : out STD_LOGIC;
            q_bar : out STD_LOGIC);
 end t_ff_rst;
@@ -42,26 +42,32 @@ end t_ff_rst;
 architecture behavioral of t_ff_rst is
     -- It must use this local signal instead of output ports
     -- because "out" ports cannot be read within the architecture
-    signal sig_q : std_logic;
+    signal s_q : std_logic;
 begin
     --------------------------------------------------------
     -- p_t_ff_rst:
     -- T type flip-flop with a high-active synchro reset and
     -- rising-edge clk.
-    -- sig_q = t./sig_q + /t.sig_q
-    -- sig_q =  sig_q if t = 0 (no change)
-    -- sig_q = /sig_q if t = 1 (inversion)
+    -- q(n+1) = t./q(n) + /t.q(n)
+    -- q(n+1) =  q(n) if t = 0 (no change)
+    -- q(n+1) = /q(n) if t = 1 (inversion)
     --------------------------------------------------------
-    p_t_ff_rst : process (clk) is
+    p_t_ff_rst : process (clk)
     begin
         if rising_edge(clk) then
-
-        -- WRITE YOUR CODE HERE
-
+            
+            if (rst = '1') then
+                s_q <= '0';
+            elsif (t ='1') then 
+                s_q <= not s_q;
+            else
+                s_q <= s_q;
+             end if;
+                
         end if;
     end process p_t_ff_rst;
 
     -- Output ports are permanently connected to local signal
-    q     <= sig_q;
-    q_bar <= not sig_q;
+    q     <= s_q;
+    q_bar <= not s_q;
 end architecture behavioral;
