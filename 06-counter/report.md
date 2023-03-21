@@ -1,4 +1,4 @@
-# Lab 6: INSERT_YOUR_FIRSTNAME INSERT_YOUR_LASTNAME
+# Lab 6: JAKUB PACHEL
 
 ### Bidirectional counter
 
@@ -17,7 +17,10 @@
           sig_cnt <= (others => '0'); -- Clear all bits
         elsif (en = '1') then         -- Test if counter is enabled
 
-          -- TEST COUNTER DIRECTION HERE
+          if (cnt_up = '1') then
+            sig_cnt <= sig_cnt + 1;
+          elsif (cnt_up = '0') then
+            sig_cnt <= sig_cnt - 1;
 
             sig_cnt <= sig_cnt + 1;
         end if;
