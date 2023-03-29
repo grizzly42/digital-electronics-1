@@ -1,4 +1,4 @@
-# Lab 7: INSERT_YOUR_FIRSTNAME INSERT_YOUR_LASTNAME
+# Lab 7: JAKUB PACHEL
 
 ### Display driver
 
@@ -55,4 +55,4 @@
 
 1. Image of the 8-digit driver's block schematic. The image can be drawn on a computer or by hand. Always name all inputs, outputs, components, and internal signals!
 
-   ![your figure]()
+   ![330051132_1240401500198419_4332679833892983294_n](https://user-images.githubusercontent.com/61315339/228498377-25adfd11-c3a3-46d1-8016-7be8d46fca9a.jpg)
