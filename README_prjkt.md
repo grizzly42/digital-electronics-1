@@ -22,7 +22,8 @@ Z hardwarových součástek využíváme 4 přepínače, 5 tlačítek a 4 sedmis
 ## Software description
 
 Put flowchats/state diagrams of your algorithm(s) and direct links to source/testbench files in `src` and `sim` folders. 
-![image](https://user-images.githubusercontent.com/61315339/235538232-8f1f8c67-0be1-45e0-80d2-a9280ef2f267.png)
+
+![diagram](https://user-images.githubusercontent.com/61315339/235538320-8d389bdf-28bb-4661-9fe9-6571cd6a70f4.png)
 
 
 ### Component(s) simulation
