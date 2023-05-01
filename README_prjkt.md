@@ -1,5 +1,5 @@
 
-# Recommended README.md file structure
+# VHDL project - Časovač na intervalový (kruhový) trénink
 
 ### Team members
 
