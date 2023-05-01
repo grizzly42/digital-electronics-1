@@ -13,9 +13,11 @@ Cílem tohoto projektu bylo vytvořit časovač pro kruhový trénink. Tento ča
 která využívá vysokokapacitní FPGA. Pro návrh tothoto časovače využijeme z hardwarových součástek 4 místný sedmisegmentový displej, tlačítka a přepínače.
 Tato deska bude naprogramována v programovacím jazyku VHDL.
 
+Časovač bude umožňovat nastavení počtu kol, délky cvičícího kola a také délku pauzy mezi koly.
+
 ## Hardware description of demo application
 
-Insert descriptive text and schematic(s) of your implementation.
+Z hardwarových součástek využíváme 4 přepínače, 5 tlačítek a 4 sedmisegmentové displeje.
 
 ## Software description
 
