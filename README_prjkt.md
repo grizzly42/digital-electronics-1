@@ -9,7 +9,9 @@
 
 ## Theoretical description and explanation
 
-Enter a description of the problem and how to solve it.
+Cílem tohoto projektu bylo vytvořit časovač pro kruhový trénink. Tento časovač by měl být navržen pro na vývojové desce XILINX Nexys A7 (Artix-7 50T),
+která využívá vysokokapacitní FPGA. Pro návrh tothoto časovače využijeme z hardwarových součástek 4 místný sedmisegmentový displej, tlačítka a přepínače.
+Tato deska bude naprogramována v programovacím jazyku VHDL.
 
 ## Hardware description of demo application
 
