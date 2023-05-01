@@ -3,9 +3,9 @@
 
 ### Team members
 
-* Radim Pařízek (responsible for ...)
-* Martin Mička (responsible for ...)
-* Jakub Pachel (responsible for ...)
+* Radim Pařízek 
+* Martin Mička 
+* Jakub Pachel 
 
 ## Theoretical description and explanation
 
