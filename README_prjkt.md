@@ -38,5 +38,5 @@ Write an instruction manual for your application, including photos or a link to 
 
 ## References
 
-1. Put here the literature references you used.
+1. [https://www.edaplayground.com/...](https://digilent.com/reference/programmable-logic/nexys-a7/reference-manual)
 2. ...
