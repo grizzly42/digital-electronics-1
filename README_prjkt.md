@@ -17,7 +17,7 @@ Tato deska bude naprogramována v programovacím jazyku VHDL.
 
 ## Hardware popis
 
-Z hardwarových součástek využíváme 4 přepínače, 5 tlačítek a 4 sedmisegmentové displeje. PřepínaČ úpúlně v pravo je určen pro přepnutí do módu nastavování, Přepínač první z leva je pro přepnutí do nastavování délky doby tréninku, přpínač druhý z leva je úrčen pro nastavování délky doby pauzy a třetí z leva je pro nastavování počtu kol. 
+Z hardwarových součástek využíváme 4 přepínače, 5 tlačítek a 4 sedmisegmentové displeje. PřepínaČ úplně v pravo je určen pro přepnutí do módu nastavování, Přepínač první z leva je pro přepnutí do nastavování délky doby tréninku, přpínač druhý z leva je úrčen pro nastavování délky doby pauzy a třetí z leva je pro nastavování počtu kol. Nastavovánní tedy probíhá pomocí levého a pravého tlačítka. Problém u těchto tlačítek je, že při stisknutí tlačítka nastane takzvaný zákmit, což by znamenalo že po jednom stisknutí tlačítka by se přičetlo mnohonásobně víc sekund v nastavování. Tudíž je potřeba tyto zákmity softwarově ošetřit.
 
 ## Software popis
 
