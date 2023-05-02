@@ -35,6 +35,7 @@ Write descriptive text and simulation screenshots of your components.
 Write an instruction manual for your application, including photos or a link to a video.
 <img width="606" alt="manual" src="https://user-images.githubusercontent.com/61315339/235537917-ad89aa39-6605-4a73-b41e-47314a45cf56.png">
 
+<img width="606" alt="manual02" src="https://user-images.githubusercontent.com/61315339/235627124-21bb6ee8-45e6-429f-8687-c69112487200.png">
 
 ## References
 
